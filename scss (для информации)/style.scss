@@ -1,0 +1,180 @@
+/* ШРИФТЫ===============================================================================================================*/
+
+/*ШРИФТ ПО УМОЛЧАНИЮ======================================================================================================*/
+$font-family: "Montserrat";
+
+/*ПЕРЕМЕННЫЕ==============================================================================================================*/
+$minWidth: 320px;
+$maxWidth: 1920px; //общая ширина макета
+$maxWidthContainer: 1620px; //увеличиваем величину из макета с учетом паддингов
+$md1: 1632px; //$maxWidthContainer + 12px
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+/*ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ==============================================================================================*/
+@import "null";
+
+body {
+	font-family: $font-family;
+	font-size: 18px;
+	font-weight: 400;
+	color: #000000;
+}
+
+/*ОБОЛОЧКА===============================================================================================================*/
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	max-width: $maxWidthContainer;
+	padding: 0px 15px;
+	background: linear-gradient(45deg, #e949c1, #f8fa83);
+}
+
+/*MAIN===============================================================*/
+.calculator {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// .calculator__form
+	&__form {
+		width: 400px;
+		background-color: #f3eaea;
+		border-radius: 5px;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	}
+
+	//.calculator__total
+	&__total {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0px 30px;
+		background-color: rgb(8, 105, 8);
+		border-radius: 2px;
+		color: #fff;
+		position: absolute;
+		bottom: 15px;
+		height: 0px;
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+
+		&._active {
+			bottom: 80px;
+			height: 40px;
+			opacity: 100%;
+		}
+	}
+}
+.form-calculator {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// .form-calculator__title
+
+	&__title {
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	// .form-calculator__line
+
+	&__line {
+		width: 100%;
+		height: 1px;
+		background-color: rgb(196, 186, 186);
+		margin-bottom: 15px;
+	}
+
+	// .form-calculator__information-field
+
+	&__information-field {
+	}
+
+	// .form-calculator__button
+
+	&__button {
+		button {
+			display: block;
+			padding: 5px;
+			border: 1px solid gray;
+			border-radius: 5px;
+			background: inherit;
+		}
+	}
+}
+.field-information {
+	width: 100%;
+	margin-bottom: 15px;
+	// .field-information__info
+
+	&__info {
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+	// .field-information__subtitle
+
+	&__subtitle {
+		font-size: 11px;
+	}
+
+	// .field-information__text-area
+
+	&__text-area {
+		display: flex;
+		height: 23px;
+	}
+
+	// .field-information__button
+
+	&__button {
+		flex: 0 0 30px;
+		border-bottom-left-radius: 5px;
+		border-top-left-radius: 5px;
+		margin-right: 2px;
+		// .field-information__button_1
+
+		&_1 {
+			background: rgb(219, 216, 216) url("@img/usd.png") center / 75% no-repeat;
+		}
+		// .field-information__button_2
+
+		&_2 {
+			background: rgb(219, 216, 216) url("../img/man.png") center / 50% no-repeat;
+		}
+	}
+
+	// .field-information__input
+
+	&__input {
+		flex: 1 1 auto;
+		input {
+			width: 100%;
+			height: 100%;
+			border-bottom-right-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+	}
+
+	// .field-information__select
+
+	&__select {
+		height: 23px;
+
+		select {
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+			padding-left: 10px;
+		}
+		option {
+			padding-left: 15px;
+		}
+	}
+}

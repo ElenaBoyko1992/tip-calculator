@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap&_v=20220326155320"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Tip-calculator</title>
+</head>
+
+<body>
+
+	<main>
+		<div class="calculator wrapper">
+			<form class="calculator__form form-calculator">
+				<h1 class="form-calculator__title">Tip Calculator</h1>
+				<div class="form-calculator__line"></div>
+				<div class="form-calculator__information-field field-information">
+					<div class="field-information__info">
+						<div class="field-information__subtitle">Bill Amount</div>
+						<div class="field-information__text-area">
+							<div class="field-information__button field-information__button_1"></div>
+							<div class="field-information__input">
+								<input name="amount" type="number">
+							</div>
+						</div>
+					</div>
+					<div class="field-information__info">
+						<div class="field-information__subtitle">Number of Guests</div>
+						<div class="field-information__text-area">
+							<div class="field-information__button field-information__button_2"></div>
+							<div class="field-information__input">
+								<input name="guests" type="number">
+							</div>
+						</div>
+					</div>
+					<div class="field-information__info">
+						<div class="field-information__subtitle">Service Quality</div>
+						<div class="field-information__select">
+							<select name="select" id="">
+								<option disabled selected value="0">Choose...</option>
+								<option value="0.3">30% - Outstanding</option>
+								<option value="0.2">20% - Good</option>
+								<option value="0.15">15% - It was ok</option>
+								<option value="0.1">10% - Bad</option>
+								<option value="0.05">5% - Terrible</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="form-calculator__line"></div>
+				<div class="form-calculator__button">
+					<button type="button" name="button">Calculate</button>
+				</div>
+			</form>
+			<div class="calculator__total">test</div>
+		</div>
+	</main>
+
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
